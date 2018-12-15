@@ -1,0 +1,57 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    outline: 1px solid red;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    /* margin: 0 2rem 0 2rem; */
+}
+
+.student {
+    outline: 1px solid green;
+    display: flex;
+    justify-content: center;
+    /* display: flex; */
+    /* margin: 0 auto; */
+}
+
+.studentData {
+    outline: 1px solid greenyellow;
+    display: inline-block;
+    width: 10%;
+    padding: 0 1rem;
+}
+
+h3,
+p {
+    display: inline-block
+}
+
+.studentImage {
+    display: inline-block;
+    flex: 0
+}
+
+.studentData>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.studentData>div label {
+    margin-right: .5rem
+}
+
+.studentData.name {
+    display: flex;
+    justify-content: space-around;
+}
+
+.prevNextBtns {
+    text-align: right;
+}

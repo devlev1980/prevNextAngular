@@ -1,0 +1,34 @@
+[{
+        "id": 1,
+        "name": "Yevgeny",
+        "teudatZeut": "123456",
+        "birthday": "2017-04-19",
+        "class": "1B",
+        "image": "src/assets/img/contact.png"
+    },
+    {
+        "id": 2,
+        "name": "Igor",
+        "teudatZeut": "1234567",
+        "birthday": "2017-02-18",
+        "class": "2B",
+        "image": "src/assets/img/contact.png"
+    },
+    {
+        "id": 3,
+        "name": "Alex",
+        "teudatZeut": "12345678",
+        "birthday": "2017-06-20",
+        "class": "5B",
+        "image": "src/assets/img/contact.png"
+    },
+    {
+        "id": 4,
+        "name": "Sergey",
+        "teudatZeut": "1023456",
+        "birthday": "2017-07-20",
+        "class": "7B",
+        "image": "src/assets/img/contact.png"
+    }
+
+]
