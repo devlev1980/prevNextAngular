@@ -3,7 +3,7 @@
     <select [(ngModel)]="selectedStudent" (change)="onSelected(selectedStudent)">
     <option *ngFor="let student of students" >{{student.name}}</option>
   </select>
-    <!-- <p *ngIf="selectedStudent">Selected Student : {{currentStudent|json}}</p> -->
+    <p *ngIf="selectedStudent">Selected Student : {{currentStudent|json}}</p>
     <div class="student">
         <div class="studentImage"> <img [src]="contact.image" alt="" class="studentImage"></div>
 
@@ -26,16 +26,16 @@
             <div *ngFor="let student of students|slice:0:1 ;let first = first" class="studentData">
 
                 <div class="name"><label>Name</label>
-                    <p>{{student.name}}</p>
+                    <!-- <p>{{student.name}}</p> -->
                 </div>
                 <div> <label>Teudat Zeut</label>
-                    <p>{{student.teudatZeut}}</p>
+                    <!-- <p>{{student.teudatZeut}}</p> -->
                 </div>
                 <div> <label>Birthday </label>
-                    <p>{{student.birthday}}</p>
+                    <!-- <p>{{student.birthday}}</p> -->
                 </div>
                 <div><label>Class</label>
-                    <p>{{student.class}}</p>
+                    <!-- <p>{{student.class}}</p> -->
                 </div>
 
             </div>
