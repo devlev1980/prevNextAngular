@@ -9,16 +9,16 @@
 
         <div class="studentData" *ngIf="selectedStudent;else defaultStudent">
             <div class="name"><label>Name</label>
-                <p>{{currentStudent.name}}</p>
+                <!-- <p>{{currentStudent.name}}</p> -->
             </div>
             <div> <label>Teudat Zeut</label>
-                <p>{{currentStudent.teudatZeut}}</p>
+                <!-- <p>{{currentStudent.teudatZeut}}</p> -->
             </div>
             <div> <label>Birthday </label>
-                <p>{{currentStudent.birthday|date:'dd/MM/yyy'}}</p>
+                <!-- <p>{{currentStudent.birthday|date:'dd/MM/yyy'}}</p> -->
             </div>
             <div><label>Class</label>
-                <p>{{currentStudent.class}}</p>
+                <!-- <p>{{currentStudent.class}}</p> -->
             </div>
         </div>
 
@@ -43,7 +43,7 @@
     </div>
     <!-- <p>{{currentStudent.birthday}}</p> -->
     <div class="prevNextBtns">
-        <button class="prev" (click)="onPrevious()">Prev</button>
+        <button class="prev" (click)="onPrevious(currentStudent)">Prev</button>
         <button class="next" (click)="onNext(currentStudent)">Next</button>
     </div>
 

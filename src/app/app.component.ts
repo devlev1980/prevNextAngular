@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   selectedStudent: string;
   currentStudent: Student;
   nextStudent: Student;
+  previousStudent: Student;
 
   students: Student[] = [];
 
@@ -30,56 +31,54 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.studentService.getStudents().subscribe((students: Student[]) => {
       this.students = students;
-      console.log(this.students);
     });
   }
   onSelected(selectedStudent) {
-    //  console.log(selectedStudent);
     this.students.forEach((student) => {
       if (student.name === selectedStudent) {
         this.currentStudent = student;
       }
-      // console.log(this.currentStudent)
     });
 
   }
 
 
-  // console.log(e);
 
 
-  onPrevious() {
-    this.students.forEach((student, index) => {
-      if (student[index] > 0) {
-        return this.currentStudent = student[index - 1];
-      }
-    });
-    // if(currentStudentId === 0 ){
-    //   console.log(currentStudentId)
-    //   // console.log(this.students[this.students.length-1])
-    //    return this.students[0];
-    // }
-    // return this.students[currentStudentId - 1];
+  onPrevious(currentStudent) {
+    if (this.students.indexOf(currentStudent) > 0) {
+      const index = this.students.indexOf(currentStudent) - 1;
+      this.previousStudent = this.students[index];
+      this.currentStudent = this.previousStudent;
+      console.log(this.previousStudent);
 
-    // console.log(idx);
+    } else {
+      return false;
+    }
+
   }
   onNext(currentStudent) {
-    // console.log(currentStudent)
+    if (this.students.indexOf(currentStudent) < this.students.length - 1) {
+      const index = this.students.indexOf(currentStudent) + 1;
+      this.nextStudent = this.students[index];
+      this.currentStudent = this.nextStudent;
+      console.log(this.nextStudent);
+    } else {
+      return false;
+    }
+
+
+
 
     // if(currentStudent){
     //   // console.log( parseInt(student.id) +1)
     //   // console.log(currentStudent.id+1);
     //   this.nextStudent.id = currentStudent.id+1
 
-    //   console.log(this.nextStudent);
-    // console.log(this.nextStudent.id)
+
   }
 
 
-  // if (currentStudentId === this.students.length - 1) {
-  //    console.log(this.students[this.students.length - 1 ] );
-  //   //  return this.students[0];
-  // }
-  // return this.students[currentStudentId+1];
+
 }
 

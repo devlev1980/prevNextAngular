@@ -1,5 +1,5 @@
 [{
-        "id": 1,
+        "id": 0,
         "name": "Yevgeny",
         "teudatZeut": "123456",
         "birthday": "2017-04-19",
@@ -7,7 +7,7 @@
         "image": "src/assets/img/contact.png"
     },
     {
-        "id": 2,
+        "id": 1,
         "name": "Igor",
         "teudatZeut": "1234567",
         "birthday": "2017-02-18",
@@ -15,7 +15,7 @@
         "image": "src/assets/img/contact.png"
     },
     {
-        "id": 3,
+        "id": 2,
         "name": "Alex",
         "teudatZeut": "12345678",
         "birthday": "2017-06-20",
@@ -23,7 +23,7 @@
         "image": "src/assets/img/contact.png"
     },
     {
-        "id": 4,
+        "id": 3,
         "name": "Sergey",
         "teudatZeut": "1023456",
         "birthday": "2017-07-20",
