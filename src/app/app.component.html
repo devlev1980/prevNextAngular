@@ -44,11 +44,18 @@
     <!-- <p>{{currentStudent.birthday}}</p> -->
     <div class="prevNextBtns" *ngIf="selectedStudent">
         <button class="prev" (click)="onPrevious(currentStudent)">Prev</button>
-        <label *ngIf="previousStudent"> {{students[previousStudentIndex+1].name}} </label>
+        <label> {{selectedStudent === true? currentStudent?.name:students[previousStudentIndex-1]?.name}} </label>
+
         <button class="next" (click)="onNext(currentStudent)">Next</button>
-        <label *ngIf="nextStudent"> {{students[nextStudntIndex+1].name}} </label>
+        <label>{{selectedStudent === true? currentStudent?.name:students[nextStudentIndex+1]?.name}} </label>
+
     </div>
 
+    {{students.length}}
 
 
+    <ng-template #showPrevious>
+        <label> {{students[previousStudentIndex-1].name}} </label>
+
+    </ng-template>
 </div>

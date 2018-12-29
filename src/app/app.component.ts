@@ -22,17 +22,16 @@ export class AppComponent implements OnInit {
   nextStudent: Student;
   previousStudent: Student;
   previousStudentIndex: number;
-  nextStudntIndex: number;
+  nextStudentIndex: number;
 
   students: Student[] = [];
 
-  constructor(private studentService: StudentService) {}
+  constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
     this.studentService.getStudents().subscribe((students: Student[]) => {
       this.students = students;
     });
-
   }
   onSelected(selectedStudent) {
     this.students.forEach(student => {
@@ -54,8 +53,8 @@ export class AppComponent implements OnInit {
   }
   onNext(currentStudent) {
     if (this.students.indexOf(currentStudent) < this.students.length - 1) {
-      this.nextStudntIndex = this.students.indexOf(currentStudent) + 1;
-      this.nextStudent = this.students[this.nextStudntIndex];
+      this.nextStudentIndex = this.students.indexOf(currentStudent) + 1;
+      this.nextStudent = this.students[this.nextStudentIndex];
       this.currentStudent = this.nextStudent;
       // console.log(this.nextStudent);
     } else {
