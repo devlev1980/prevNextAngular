@@ -3,22 +3,22 @@
     <select [(ngModel)]="selectedStudent" (change)="onSelected(selectedStudent)">
     <option *ngFor="let student of students" >{{student.name}}</option>
   </select>
-    <p *ngIf="selectedStudent">Selected Student : {{currentStudent|json}}</p>
+    <!-- <p *ngIf="selectedStudent">Selected Student : {{currentStudent|json}}</p> -->
     <div class="student">
         <div class="studentImage"> <img [src]="contact.image" alt="" class="studentImage"></div>
 
         <div class="studentData" *ngIf="selectedStudent;else defaultStudent">
             <div class="name"><label>Name</label>
-                <!-- <p>{{currentStudent.name}}</p> -->
+                <p>{{currentStudent.name}}</p>
             </div>
             <div> <label>Teudat Zeut</label>
-                <!-- <p>{{currentStudent.teudatZeut}}</p> -->
+                <p>{{currentStudent.teudatZeut}}</p>
             </div>
             <div> <label>Birthday </label>
-                <!-- <p>{{currentStudent.birthday|date:'dd/MM/yyy'}}</p> -->
+                <p>{{currentStudent.birthday|date:'dd/MM/yyy'}}</p>
             </div>
             <div><label>Class</label>
-                <!-- <p>{{currentStudent.class}}</p> -->
+                <p>{{currentStudent.class}}</p>
             </div>
         </div>
 
@@ -26,25 +26,29 @@
             <div *ngFor="let student of students|slice:0:1 ;let first = first" class="studentData">
 
                 <div class="name"><label>Name</label>
-                    <!-- <p>{{student.name}}</p> -->
+                    <p>{{student.name}}</p>
                 </div>
                 <div> <label>Teudat Zeut</label>
-                    <!-- <p>{{student.teudatZeut}}</p> -->
+                    <p>{{student.teudatZeut}}</p>
                 </div>
                 <div> <label>Birthday </label>
-                    <!-- <p>{{student.birthday}}</p> -->
+                    <p>{{student.birthday}}</p>
                 </div>
                 <div><label>Class</label>
-                    <!-- <p>{{student.class}}</p> -->
+                    <p>{{student.class}}</p>
                 </div>
 
             </div>
         </ng-template>
     </div>
     <!-- <p>{{currentStudent.birthday}}</p> -->
-    <div class="prevNextBtns">
+    <div class="prevNextBtns" *ngIf="selectedStudent">
         <button class="prev" (click)="onPrevious(currentStudent)">Prev</button>
+        <label *ngIf="previousStudent"> {{students[previousStudentIndex+1].name}} </label>
         <button class="next" (click)="onNext(currentStudent)">Next</button>
+        <label *ngIf="nextStudent"> {{students[nextStudntIndex+1].name}} </label>
     </div>
+
+
 
 </div>

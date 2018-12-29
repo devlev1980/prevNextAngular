@@ -53,5 +53,10 @@ p {
 }
 
 .prevNextBtns {
-    text-align: right;
+    display: flex;
+    justify-content: center;
+}
+
+.prev {
+    margin-right: 10px;
 }

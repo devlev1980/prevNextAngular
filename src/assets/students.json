@@ -1,6 +1,6 @@
 [{
         "id": 0,
-        "name": "Yevgeny",
+        "name": "Yevgeny-1",
         "teudatZeut": "123456",
         "birthday": "2017-04-19",
         "class": "1B",
@@ -8,7 +8,7 @@
     },
     {
         "id": 1,
-        "name": "Igor",
+        "name": "Igor-2",
         "teudatZeut": "1234567",
         "birthday": "2017-02-18",
         "class": "2B",
@@ -16,7 +16,7 @@
     },
     {
         "id": 2,
-        "name": "Alex",
+        "name": "Alex-3",
         "teudatZeut": "12345678",
         "birthday": "2017-06-20",
         "class": "5B",
@@ -24,7 +24,7 @@
     },
     {
         "id": 3,
-        "name": "Sergey",
+        "name": "Sergey-4",
         "teudatZeut": "1023456",
         "birthday": "2017-07-20",
         "class": "7B",
