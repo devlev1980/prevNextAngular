@@ -5,7 +5,6 @@ html {
 }
 
 .container {
-    outline: 1px solid red;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -13,7 +12,6 @@ html {
 }
 
 .student {
-    outline: 1px solid green;
     display: flex;
     justify-content: center;
     /* display: flex; */
@@ -21,7 +19,6 @@ html {
 }
 
 .studentData {
-    outline: 1px solid greenyellow;
     display: inline-block;
     width: 10%;
     padding: 0 1rem;
@@ -57,6 +54,13 @@ p {
     justify-content: center;
 }
 
-.prev {
+.prev,
+.next {
     margin-right: 10px;
+    font-size: 16px;
+    padding: 10px 2rem;
+    background: rebeccapurple;
+    color: white;
+    border: none;
+    border-radius: 10px;
 }

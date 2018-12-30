@@ -43,7 +43,7 @@
     </div>
     <!-- <p>{{currentStudent.birthday}}</p> -->
     <div class="prevNextBtns" *ngIf="selectedStudent">
-        <button class="prev" (click)="onPrevious(currentStudent)">Prev</button>
+        <button *ngIf="students.length>0" class="prev" (click)="onPrevious(currentStudent)">Prev</button>
         <label> {{selectedStudent === true? currentStudent?.name:students[previousStudentIndex-1]?.name}} </label>
 
         <button class="next" (click)="onNext(currentStudent)">Next</button>
